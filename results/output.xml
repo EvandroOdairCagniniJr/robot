@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.15.0 on win32)" generated="2026-10-15T21:47:31.702131" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot" source="C:\Users\evand\OneDrive\Documentos\robot">
+<suite id="s1-s1" name="Mercado Livre" source="C:\Users\evand\OneDrive\Documentos\robot\mercado_livre.robot">
+<test id="s1-s1-t1" name="Caso de testes 01 - Abrir o site do Mercado Livre" line="6">
+<kw name="Abrir a home do site Mercadolivre.com">
+<msg time="2026-10-15T21:47:32.264937" level="FAIL">No keyword with name 'Abrir a home do site Mercadolivre.com' found.</msg>
+<status status="FAIL" start="2026-10-15T21:47:32.263425" elapsed="0.007413">No keyword with name 'Abrir a home do site Mercadolivre.com' found.</status>
+</kw>
+<status status="FAIL" start="2026-10-15T21:47:32.254403" elapsed="0.018219">No keyword with name 'Abrir a home do site Mercadolivre.com' found.</status>
+</test>
+<doc>Esse cenário de teste é para testar o site Mercado Livre</doc>
+<status status="FAIL" start="2026-10-15T21:47:32.219776" elapsed="0.060382"/>
+</suite>
+<status status="FAIL" start="2026-10-15T21:47:31.735792" elapsed="0.550157"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Robot" id="s1" pass="0" fail="1" skip="0">Robot</stat>
+<stat name="Mercado Livre" id="s1-s1" pass="0" fail="1" skip="0">Robot.Mercado Livre</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-10-15T21:47:32.224301" level="ERROR">Error in file 'C:\Users\evand\OneDrive\Documentos\robot\mercado_livre.robot' on line 3: Error in file 'C:\Users\evand\OneDrive\Documentos\robot\mercado_resources.robot' on line 1: Unrecognized section header '*** Setings ***'. Valid sections: 'Settings', 'Variables', 'Keywords' and 'Comments'.</msg>
+</errors>
+</robot>
