@@ -1,31 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5 (Python 3.15.0 on win32)" generated="2026-10-15T21:47:31.702131" rpa="false" schemaversion="5">
-<suite id="s1" name="Robot" source="C:\Users\evand\OneDrive\Documentos\robot">
-<suite id="s1-s1" name="Mercado Livre" source="C:\Users\evand\OneDrive\Documentos\robot\mercado_livre.robot">
-<test id="s1-s1-t1" name="Caso de testes 01 - Abrir o site do Mercado Livre" line="6">
-<kw name="Abrir a home do site Mercadolivre.com">
-<msg time="2026-10-15T21:47:32.264937" level="FAIL">No keyword with name 'Abrir a home do site Mercadolivre.com' found.</msg>
-<status status="FAIL" start="2026-10-15T21:47:32.263425" elapsed="0.007413">No keyword with name 'Abrir a home do site Mercadolivre.com' found.</status>
+<robot generator="Robot 7.5 (Python 3.15.0 on win32)" generated="2026-10-29T19:44:48.988555" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot" source="c:\Users\evand\OneDrive\Documentos\robot">
+<suite id="s1-s1" name="Mercado Livre" source="c:\Users\evand\OneDrive\Documentos\robot\mercado_livre.robot">
+<test id="s1-s1-t1" name="Adicionar produto ao carrinho" line="5">
+<kw name="Abrir o site" owner="mercado_resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-29T19:44:50.026112" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.br'.</msg>
+<msg time="2026-10-29T19:44:50.788130" level="WARN">The chromedriver version (155.0.8059.84) detected in PATH at C:\Users\evand\AppData\Local\Programs\Python\Python315\Scripts\chromedriver.exe might not be compatible with the detected chrome version (156.0.8078.73); currently, chromedriver 156.0.8078.80 is recommended for chrome 156.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>https://www.amazon.com.br</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-29T19:44:50.025474" elapsed="4.063548"/>
 </kw>
-<status status="FAIL" start="2026-10-15T21:47:32.254403" elapsed="0.018219">No keyword with name 'Abrir a home do site Mercadolivre.com' found.</status>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-29T19:44:54.089668" elapsed="0.850638"/>
+</kw>
+<status status="PASS" start="2026-10-29T19:44:50.023450" elapsed="4.917825"/>
+</kw>
+<kw name="Clicar em continuar comprando" owner="mercado_resources">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-29T19:44:54.955331" level="INFO">Clicking element 'xpath://button[contains(.,'Continuar comprando')]'.</msg>
+<msg time="2026-10-29T19:44:55.116164" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-23.png"&gt;&lt;img src="selenium-screenshot-23.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-29T19:44:55.118823" level="FAIL">Element with locator 'xpath://button[contains(.,'Continuar comprando')]' not found.</msg>
+<arg>xpath://button[contains(.,'Continuar comprando')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-10-29T19:44:54.952994" elapsed="0.297479">Element with locator 'xpath://button[contains(.,'Continuar comprando')]' not found.</status>
+</kw>
+<arg>Click Element</arg>
+<arg>xpath://button[contains(.,'Continuar comprando')]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible errorw.</doc>
+<status status="PASS" start="2026-10-29T19:44:54.945053" elapsed="0.306316"/>
+</kw>
+<status status="PASS" start="2026-10-29T19:44:54.942924" elapsed="0.309071"/>
+</kw>
+<kw name="Aceitar os cookies" owner="mercado_resources">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-29T19:44:55.259521" level="INFO">Clicking element 'id:sp-cc-accept'.</msg>
+<msg time="2026-10-29T19:45:00.360297" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-24.png"&gt;&lt;img src="selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-29T19:45:00.361484" level="FAIL">Element with locator 'id:sp-cc-accept' not found.</msg>
+<arg>id:sp-cc-accept</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-10-29T19:44:55.257929" elapsed="5.131822">Element with locator 'id:sp-cc-accept' not found.</status>
+</kw>
+<arg>Click Element</arg>
+<arg>id:sp-cc-accept</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible errorw.</doc>
+<status status="PASS" start="2026-10-29T19:44:55.255455" elapsed="5.135465"/>
+</kw>
+<status status="PASS" start="2026-10-29T19:44:55.253346" elapsed="5.138207"/>
+</kw>
+<kw name="Pesquisar o produto" owner="mercado_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-29T19:45:00.397126" level="INFO">Typing text 'camisa nike' into text field 'id:twotabsearchtextbox'.</msg>
+<arg>id:twotabsearchtextbox</arg>
+<arg>camisa nike</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-29T19:45:00.395106" elapsed="1.390208"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-29T19:45:01.795375" level="INFO">Clicking element 'id:nav-search-submit-button'.</msg>
+<arg>id:nav-search-submit-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-29T19:45:01.787802" elapsed="5.191580"/>
+</kw>
+<status status="PASS" start="2026-10-29T19:45:00.392925" elapsed="6.587269"/>
+</kw>
+<kw name="Clicar no primeiro produto" owner="mercado_resources">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-10-29T19:45:07.143934" level="INFO">${link} = https://www.amazon.com.br/sspa/click?ie=UTF8&amp;spc=MToxNjIyMDIzODY4MTYyMDMxOjE3OTMzMTM5MDQ6c3BfYXRmOjMwMTE2ODQ5MTk5NjUwMjo6MDo6&amp;url=%2FCamiseta-masculina-infantil-estampa-esportiva%2Fdp%2FB07KS4FH24%2Fr...</msg>
+<var>${link}</var>
+<arg>xpath:(//div[@data-component-type='s-search-result']//a[.//h2])[1]</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-10-29T19:45:06.985012" elapsed="0.160190"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-10-29T19:45:07.148267" level="INFO">Opening url 'https://www.amazon.com.br/sspa/click?ie=UTF8&amp;spc=MToxNjIyMDIzODY4MTYyMDMxOjE3OTMzMTM5MDQ6c3BfYXRmOjMwMTE2ODQ5MTk5NjUwMjo6MDo6&amp;url=%2FCamiseta-masculina-infantil-estampa-esportiva%2Fdp%2FB07KS4FH24%2Fref%3Dsr_1_1_sspa%3F__mk_pt_BR%3D%25C3%2585M%25C3%2585%25C5%25BD%25C3%2595%25C3%2591%26crid%3DDXFHSY4EOUCF%26dib%3DeyJ2IjoiMSJ9.DQg-7OqufyRV1Pgms_qZbvCExK3f-RU4xLYMKnaz3wboG8EpLl37X1pRMFUDF8JVDiY5dX0E_I6xii-d6b5NG6iyNVPT2b0llzPwnbbiccw2WbNeauR03tZtYGlZw-H0RgocHiVKyOJEkOJeaBvXtBBqOGM3kDnlnCU2Y09W8l_np4hbB7ShguejGKa-RDsWt_Dm91MNHssDS4OBCfp_uxbaEBUJiVIs4ZP_vbsh3PpR3dpZHe9wKTg8JlwduMV_podDCtnKQ0tG8vicIqzGkxd5fGQZAPJz4xurhAS9h3Y.EYX1z1sFJXOU8JgxkPvJ5HYobPIIz7L8zwB_Td-9JwI%26dib_tag%3Dse%26keywords%3Dcamisa%2Bnike%26qid%3D1793313904%26sprefix%3Dcamisa%2Bnike%252Caps%252C504%26sr%3D8-1-spons%26ufe%3Dapp_do%253Aamzn1.fos.e05b01e0-91a7-477e-a514-15a32325a6d6%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1'</msg>
+<arg>${link}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-10-29T19:45:07.146439" elapsed="5.420521"/>
+</kw>
+<status status="PASS" start="2026-10-29T19:45:06.982458" elapsed="5.585257"/>
+</kw>
+<kw name="Adicionar ao carrinho" owner="mercado_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-29T19:45:12.599503" level="INFO">Clicking element 'id:add-to-cart-button'.</msg>
+<arg>id:add-to-cart-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-29T19:45:12.594778" elapsed="1.695914"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:attachSiNoCoverage</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-29T19:45:14.294253" elapsed="0.239776"/>
+</kw>
+<msg time="2026-10-29T19:45:14.535173" level="INFO">${tem_seguro} = True</msg>
+<var>${tem_seguro}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>id:attachSiNoCoverage</arg>
+<arg>10s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-10-29T19:45:14.291874" elapsed="0.244032"/>
+</kw>
+<if>
+<branch type="IF" condition="${tem_seguro}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-29T19:45:14.541214" level="INFO">Clicking element 'xpath://*[@id='attachSiNoCoverage']//input'.</msg>
+<arg>xpath://*[@id='attachSiNoCoverage']//input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-29T19:45:14.539510" elapsed="0.387878"/>
+</kw>
+<status status="PASS" start="2026-10-29T19:45:14.537427" elapsed="0.390608"/>
+</branch>
+<status status="PASS" start="2026-10-29T19:45:14.536948" elapsed="0.391955"/>
+</if>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Adicionado ao carrinho</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-10-29T19:45:14.930114" elapsed="1.634980"/>
+</kw>
+<status status="PASS" start="2026-10-29T19:45:12.585041" elapsed="3.981023"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-29T19:45:16.567610" elapsed="4.128264"/>
+</kw>
+<status status="PASS" start="2026-10-29T19:44:50.011995" elapsed="30.684665"/>
 </test>
-<doc>Esse cenário de teste é para testar o site Mercado Livre</doc>
-<status status="FAIL" start="2026-10-15T21:47:32.219776" elapsed="0.060382"/>
+<status status="PASS" start="2026-10-29T19:44:49.130792" elapsed="31.574530"/>
 </suite>
-<status status="FAIL" start="2026-10-15T21:47:31.735792" elapsed="0.550157"/>
+<status status="PASS" start="2026-10-29T19:44:49.006733" elapsed="31.819211"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Robot" id="s1" pass="0" fail="1" skip="0">Robot</stat>
-<stat name="Mercado Livre" id="s1-s1" pass="0" fail="1" skip="0">Robot.Mercado Livre</stat>
+<stat name="Robot" id="s1" pass="1" fail="0" skip="0">Robot</stat>
+<stat name="Mercado Livre" id="s1-s1" pass="1" fail="0" skip="0">Robot.Mercado Livre</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2026-10-15T21:47:32.224301" level="ERROR">Error in file 'C:\Users\evand\OneDrive\Documentos\robot\mercado_livre.robot' on line 3: Error in file 'C:\Users\evand\OneDrive\Documentos\robot\mercado_resources.robot' on line 1: Unrecognized section header '*** Setings ***'. Valid sections: 'Settings', 'Variables', 'Keywords' and 'Comments'.</msg>
+<msg time="2026-10-29T19:44:50.788130" level="WARN">The chromedriver version (155.0.8059.84) detected in PATH at C:\Users\evand\AppData\Local\Programs\Python\Python315\Scripts\chromedriver.exe might not be compatible with the detected chrome version (156.0.8078.73); currently, chromedriver 156.0.8078.80 is recommended for chrome 156.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
